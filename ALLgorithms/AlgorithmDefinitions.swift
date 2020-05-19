@@ -29,8 +29,11 @@ let Definitions = [
 ]
 let Algorithms = [
     "Stable Matching Problem": "algorithm stable_matching is\n\tInitialize all m ∈ M and w ∈ W to free\n\twhile ∃ free man m who still has a woman w to propose to do\n\t\tw := first woman on m's list to whom m has not yet proposed\n\t\tif w is free then\n\t\t\t(m, w) become engaged\n\t\telse some pair (m', w) already exists\n\t\t\tif w prefers m to m' then\n\t\t\t\tm' becomes free\n\t\t\t\t(m, w) become engaged\n\t\t\telse\n\t\t\t\t(m', w) remain engaged\n\t\t\tend if\n\t\tend if\n\trepeat",
-    "MST(Kruskal's Algorithm)": "2",
-    "MST(Prim's Algorithm)": "3",
+    
+    "MST(Kruskal's Algorithm)": "1. Sort all the edges in non-decreasing order of their weight.\n2. Pick the smallest edge. Check if it forms a cycle with the spanning tree formed so far. If cycle is not formed, include this edge. Else, discard it.\n3. Repeat step#2 until there are (V-1) edges in the spanning tree.",
+    
+    "MST(Prim's Algorithm)": "1. Initialize a tree with a single vertex, chosen arbitrarily from the graph.\n2. Grow the tree by one edge: of the edges that connect the tree to vertices not yet in the tree, find the minimum-weight edge, and transfer it to the tree.\n3. Repeat step 2 (until all vertices are in the tree).",
+    
     "Breadth First Search": "4",
     "Depth First Search": "5",
     "Testing Bipartiteness": "6",
