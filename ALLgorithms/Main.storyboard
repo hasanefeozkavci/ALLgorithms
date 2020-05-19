@@ -109,6 +109,9 @@
                                     </label>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="gVz-Tg-zXZ">
                                         <rect key="frame" x="-2" y="313.5" width="379" height="31"/>
+                                        <connections>
+                                            <action selector="sliderValueChanged:" destination="cCV-NS-a58" eventType="valueChanged" id="grB-uy-XEJ"/>
+                                        </connections>
                                     </slider>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -162,6 +165,7 @@
                         <outlet property="forwardButton" destination="Wjn-zR-Oi6" id="1C2-am-nMM"/>
                         <outlet property="gif" destination="alz-qL-JwX" id="5gR-sA-lzn"/>
                         <outlet property="indexLabel" destination="3up-mf-El0" id="t3w-GR-bXk"/>
+                        <outlet property="mySlider" destination="gVz-Tg-zXZ" id="S3R-rk-Bfk"/>
                         <outlet property="titleLabel" destination="zXd-oc-bv7" id="htL-sQ-jYf"/>
                     </connections>
                 </viewController>
