@@ -35,8 +35,12 @@ let Algorithms = [
     "MST(Prim's Algorithm)": "1. Initialize a tree with a single vertex, chosen arbitrarily from the graph.\n2. Grow the tree by one edge: of the edges that connect the tree to vertices not yet in the tree, find the minimum-weight edge, and transfer it to the tree.\n3. Repeat step 2 (until all vertices are in the tree).",
     
     "Breadth First Search": "4",
-    "Depth First Search": "5",
+    
+    "Depth First Search": "procedure DFS-iterative(G, v) is\n\tlet S be a stack\n\tS.push(v)\n\twhile S is not empty do\n\t\tv = S.pop()\n\t\tif v is not labeled as discovered then\n\t\t\tlabel v as discovered\n\t\t\tfor all edges from v to w in G.adjacentEdges(v) do\n\t\t\t\tS.push(w)",
+    
+    
     "Testing Bipartiteness": "6",
+    
     "Topological Ordering": "7",
     "Ford - Fulkerson Algorithm": "8"
 ]
