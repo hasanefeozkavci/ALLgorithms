@@ -9,8 +9,6 @@
 
 One to two paragraph statement about your product and what it does.
 
-![](header.png)
-
 ## Features
 
 - [x] Feature 1
