@@ -1,6 +1,6 @@
-# Product Name
-> Short blurb about what your product does.
-
+# ALLGorithms App
+> MAT335E Project
+https://img.shields.io/badge/Swift-3.0-Green
 [![Swift Version][swift-image]][swift-url]
 [![Build Status][travis-image]][travis-url
 [![CocoaPods Compatible](https://img.shields.io/cocoaods/v/EZSwiftExtensions.svg)](https://img.shields.io/cocoapods/v/LFAlertController.svg)  
