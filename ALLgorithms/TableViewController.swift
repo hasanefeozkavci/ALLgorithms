@@ -8,8 +8,8 @@
 
 import UIKit
 var myIndex = 0
+//Variables for the list
 var algorithmTitles = ["Stable Matching Problem", "MST(Kruskal's Algorithm)", "MST(Prim's Algorithm)", "Breadth First Search", "Depth First Search", "Testing Bipartiteness", "Topological Sorting", "Ford - Fulkerson Algorithm"]
-let colorArray = [UIColor.red, UIColor.blue, UIColor.yellow, UIColor.cyan, UIColor.red, UIColor.blue, UIColor.yellow, UIColor.cyan]
 var cellImages = [#imageLiteral(resourceName: "Stable Matching Problem"), #imageLiteral(resourceName: "MST(Kruskal's Algorithm)"), #imageLiteral(resourceName: "MST(Prim's Algorithm)"), #imageLiteral(resourceName: "Breadth First Search"), #imageLiteral(resourceName: "Depth First Search"), #imageLiteral(resourceName: "Testing Bipartiteness"), #imageLiteral(resourceName: "Topological Sorting"), #imageLiteral(resourceName: "Ford - Fulkerson Algorithm")]
 var limit = algorithmTitles.count
 class TableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
@@ -22,19 +22,16 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "customCell", for: indexPath) as! CustomTableViewCell
         
-        //cell.cellLabel.text = algorithmTitles[indexPath.row]
-        //cell.cellView.layer.cornerRadius = cell.cellView.frame.height / 8
-        //cell.cellImage.layer.cornerRadius = 15
+        //Using images designed with Adobe XD For the list.
         cell.cellImage.image = cellImages[indexPath.row]
-        //cell.layer.borderWidth = 5
-        //cell.layer.borderColor = colorArray[indexPath.row].cgColor
-        /*cell.cellView.layer.borderColor = UIColor(displayP3Red: 1, green: 87/255, blue: 51/255, alpha: 1).cgColor*/
 
         return cell
     }
+    //Method for the height of each cell in the list.
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
     }
+    //myIndex variable stores the list item index for further use.
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         myIndex = indexPath.row
         
@@ -43,6 +40,5 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
         tableView.delegate = self
         tableView.dataSource = self
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
 }

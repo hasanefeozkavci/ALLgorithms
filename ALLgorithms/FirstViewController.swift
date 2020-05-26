@@ -12,7 +12,7 @@ import UIKit
 
 class FirstViewController: UIViewController {
     
-    
+    //Buttons and labels.
     @IBOutlet weak var view1: UIView!
     @IBOutlet weak var node1button: UIButton!
     @IBOutlet weak var node2button: UIButton!
@@ -32,6 +32,7 @@ class FirstViewController: UIViewController {
     var shapeLayer: CAShapeLayer?
     let path = UIBezierPath()
     
+    //Drawing and animation of the line.
     func drawLine(x1: CGFloat, y1: CGFloat, x2: CGFloat, y2: CGFloat){
         path.move(to: CGPoint.init(x: x1, y: y1))
         path.addLine(to: CGPoint.init(x: x2, y: y2))
@@ -41,16 +42,13 @@ class FirstViewController: UIViewController {
         shapeLayer?.lineWidth = 4
         shapeLayer?.path = path.cgPath
         view1.layer.addSublayer(shapeLayer!)
-        
-
-        
         let animation = CABasicAnimation(keyPath: "strokeEnd")
-        
         animation.fromValue = 0
         animation.duration = 1
         shapeLayer!.add(animation, forKey: "MyAnimation")
         
     }
+    //Node(Number)Clicked functing tells us what happenens when you click that button.
     @IBAction func node1Clicked(_ sender: Any) {
         
         node1label.animate(newText: node1text, characterDelay: 0.05)
@@ -85,7 +83,6 @@ class FirstViewController: UIViewController {
     @IBAction func node5Clicked(_ sender: Any) {
         
     }
-    
     override func viewDidLoad() {
         node1button.isHidden = false
         node2button.isHidden = true
@@ -94,19 +91,6 @@ class FirstViewController: UIViewController {
         node5button.isHidden = true
         node5label.isHidden = true
         NSLog("Hey!")
-        /*
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-            self.node1Clicked((Any).self)
-        }
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-            self.node2Clicked((Any).self)
-        }
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-            self.node3Clicked((Any).self)
-        }
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-            self.node4Clicked((Any).self)
-        }
-        */
+        
     }
 }

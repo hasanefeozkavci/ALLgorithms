@@ -8,7 +8,7 @@
 
 import Foundation
 import UIKit
-
+//Just an extension for uilabel which includes animate for code readibility.
 extension UILabel {
 
     func animate(newText: String, characterDelay: TimeInterval) {
