@@ -8,23 +8,8 @@
 
 import Foundation
 import UIKit
-extension UILabel {
 
-    func animate(newText: String, characterDelay: TimeInterval) {
 
-        DispatchQueue.main.async {
-
-            self.text = ""
-
-            for (index, character) in newText.enumerated() {
-                DispatchQueue.main.asyncAfter(deadline: .now() + characterDelay * Double(index)) {
-                    self.text?.append(character)
-                }
-            }
-        }
-    }
-
-}
 class FirstViewController: UIViewController {
     
     
@@ -40,7 +25,6 @@ class FirstViewController: UIViewController {
     @IBOutlet weak var node4label: UILabel!
     @IBOutlet weak var node5label: UILabel!
     var node1text = "Edsger Wybe Dijkstra"
-    
     var node2text = "Vojtěch Jarník"
     var node3text = "Edward F. Moore"
     var node4text = "Paul Erdős"
@@ -69,28 +53,28 @@ class FirstViewController: UIViewController {
     }
     @IBAction func node1Clicked(_ sender: Any) {
         
-        node1label.animate(newText: node1text, characterDelay: 0.07)
+        node1label.animate(newText: node1text, characterDelay: 0.05)
         drawLine(x1: node1button.center.x, y1: CGFloat(node1button.center.y), x2: node2button.center.x, y2: CGFloat(node2button.center.y))
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
             self.node2button.isHidden = false
         }
     }
     @IBAction func node2Clicked(_ sender: Any) {
-        node2label.animate(newText: node2text, characterDelay: 0.07)
+        node2label.animate(newText: node2text, characterDelay: 0.05)
         drawLine(x1: node2button.center.x, y1: CGFloat(node2button.center.y), x2: node3button.center.x, y2: CGFloat(node3button.center.y))
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
             self.node3button.isHidden = false
         }
     }
     @IBAction func node3Clicked(_ sender: Any) {
-        node3label.animate(newText: node3text, characterDelay: 0.07)
+        node3label.animate(newText: node3text, characterDelay: 0.05)
         drawLine(x1: node3button.center.x, y1: CGFloat(node3button.center.y), x2: node4button.center.x, y2: CGFloat(node4button.center.y))
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
             self.node4button.isHidden = false
         }
     }
     @IBAction func node4Clicked(_ sender: Any) {
-        node4label.animate(newText: node4text, characterDelay: 0.07)
+        node4label.animate(newText: node4text, characterDelay: 0.05)
         drawLine(x1: node4button.center.x, y1: CGFloat(node4button.center.y), x2: node5button.center.x, y2: CGFloat(node5button.center.y))
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
             self.node5button.isHidden = false
@@ -110,7 +94,19 @@ class FirstViewController: UIViewController {
         node5button.isHidden = true
         node5label.isHidden = true
         NSLog("Hey!")
-
-
+        /*
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            self.node1Clicked((Any).self)
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            self.node2Clicked((Any).self)
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            self.node3Clicked((Any).self)
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            self.node4Clicked((Any).self)
+        }
+        */
     }
 }

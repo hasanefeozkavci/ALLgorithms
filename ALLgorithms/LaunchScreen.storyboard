@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -18,26 +18,16 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vyL-3y-e2u" userLabel="View of the Label">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo2" translatesAutoresizingMaskIntoConstraints="NO" id="cz9-oi-U9j">
-                                        <rect key="frame" x="103.5" y="336" width="207" height="224"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Launch Screen" translatesAutoresizingMaskIntoConstraints="NO" id="A7Q-Zd-Wxk">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="all -&gt; GO -&gt; rıthms" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XyV-nG-008">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="448"/>
-                                        <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="30"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstItem="XyV-nG-008" firstAttribute="bottom" secondItem="vyL-3y-e2u" secondAttribute="bottom" multiplier="1/2" id="1W5-ah-llN"/>
-                                    <constraint firstItem="XyV-nG-008" firstAttribute="leading" secondItem="vyL-3y-e2u" secondAttribute="leading" id="HH3-O8-6pa"/>
-                                    <constraint firstItem="XyV-nG-008" firstAttribute="top" secondItem="vyL-3y-e2u" secondAttribute="top" id="Lrx-rG-fvf"/>
-                                    <constraint firstAttribute="trailing" secondItem="XyV-nG-008" secondAttribute="trailing" id="MZd-Vy-gV8"/>
-                                    <constraint firstItem="cz9-oi-U9j" firstAttribute="trailing" secondItem="vyL-3y-e2u" secondAttribute="trailing" multiplier="3/4" id="NzQ-Wc-v7d"/>
-                                    <constraint firstItem="cz9-oi-U9j" firstAttribute="bottom" secondItem="vyL-3y-e2u" secondAttribute="bottom" multiplier="5/8" id="f6O-i2-WDi"/>
-                                    <constraint firstItem="cz9-oi-U9j" firstAttribute="leading" secondItem="vyL-3y-e2u" secondAttribute="trailing" multiplier="1/4" id="uY6-SS-Sqa"/>
-                                    <constraint firstItem="cz9-oi-U9j" firstAttribute="top" secondItem="vyL-3y-e2u" secondAttribute="bottom" multiplier="3/8" id="xPD-rd-txd"/>
+                                    <constraint firstItem="A7Q-Zd-Wxk" firstAttribute="leading" secondItem="vyL-3y-e2u" secondAttribute="leading" id="9Sv-4L-eSj"/>
+                                    <constraint firstItem="A7Q-Zd-Wxk" firstAttribute="top" secondItem="vyL-3y-e2u" secondAttribute="top" id="Bzl-QR-9yb"/>
+                                    <constraint firstAttribute="bottom" secondItem="A7Q-Zd-Wxk" secondAttribute="bottom" id="HC8-gU-b3d"/>
+                                    <constraint firstAttribute="trailing" secondItem="A7Q-Zd-Wxk" secondAttribute="trailing" id="ti4-mr-LPF"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -57,6 +47,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Logo2" width="305" height="334"/>
+        <image name="Launch Screen" width="375" height="812"/>
     </resources>
 </document>
