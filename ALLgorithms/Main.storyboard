@@ -256,157 +256,62 @@
             </objects>
             <point key="canvasLocation" x="1478.2608695652175" y="188.16964285714286"/>
         </scene>
-        <!--Construct an algorithm!-->
+        <!--Start!-->
         <scene sceneID="hNr-QX-gSk">
             <objects>
-                <viewController interfaceStyle="light" id="6Xo-Ia-2wg" customClass="FirstViewController" customModule="ALLgorithms" sceneMemberID="viewController">
+                <viewController interfaceStyle="light" id="6Xo-Ia-2wg" userLabel="Start!" customClass="FirstViewController" customModule="ALLgorithms" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9S4-N3-sad">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H4K-xd-9jB">
-                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fgH-sf-0t8">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
-                                        <color key="backgroundColor" systemColor="systemGray4Color" red="0.81960784310000001" green="0.81960784310000001" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </view>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Construct an algorithm!" translatesAutoresizingMaskIntoConstraints="NO" id="EYE-Le-bPZ">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
-                                    </imageView>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <accessibility key="accessibilityConfiguration" identifier="view2"/>
-                                <constraints>
-                                    <constraint firstItem="fgH-sf-0t8" firstAttribute="top" secondItem="H4K-xd-9jB" secondAttribute="top" id="9lh-Vl-pX2"/>
-                                    <constraint firstAttribute="bottom" secondItem="EYE-Le-bPZ" secondAttribute="bottom" id="KLU-qs-x6S"/>
-                                    <constraint firstAttribute="bottom" secondItem="fgH-sf-0t8" secondAttribute="bottom" id="Nrg-cO-8Ar"/>
-                                    <constraint firstAttribute="trailing" secondItem="fgH-sf-0t8" secondAttribute="trailing" id="TW0-A9-Jg2"/>
-                                    <constraint firstItem="EYE-Le-bPZ" firstAttribute="leading" secondItem="H4K-xd-9jB" secondAttribute="leading" id="Z9V-gm-3dS"/>
-                                    <constraint firstAttribute="trailing" secondItem="EYE-Le-bPZ" secondAttribute="trailing" id="vdJ-1i-trH"/>
-                                    <constraint firstItem="fgH-sf-0t8" firstAttribute="leading" secondItem="H4K-xd-9jB" secondAttribute="leading" id="xjj-8f-hUT"/>
-                                    <constraint firstItem="EYE-Le-bPZ" firstAttribute="top" secondItem="H4K-xd-9jB" secondAttribute="top" id="zig-q1-j3E"/>
-                                </constraints>
-                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AHa-ZG-EZK" userLabel="MainView">
-                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H0f-hd-nYy" userLabel="node1button">
-                                        <rect key="frame" x="45" y="73" width="100" height="100"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Launch Screen" translatesAutoresizingMaskIntoConstraints="NO" id="mNb-Ae-oMN">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Allgorithms-app-image" translatesAutoresizingMaskIntoConstraints="NO" id="Df5-io-l8c">
+                                        <rect key="frame" x="93" y="179" width="229" height="118"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" backgroundImage="node1"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZRS-K5-WWs">
+                                        <rect key="frame" x="53" y="575" width="308" height="96"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="Start-exploring-button"/>
                                         <connections>
-                                            <action selector="node1Clicked:" destination="6Xo-Ia-2wg" eventType="touchUpInside" id="UpK-a3-r8A"/>
+                                            <segue destination="5dt-Bx-dYz" kind="show" id="xMK-p0-fFV"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="obp-sh-TDO" userLabel="node2button">
-                                        <rect key="frame" x="250" y="122" width="100" height="100"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" backgroundImage="node2"/>
-                                        <connections>
-                                            <action selector="node2Clicked:" destination="6Xo-Ia-2wg" eventType="touchUpInside" id="x7m-7c-HuG"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jR0-ng-lzq" userLabel="node3button">
-                                        <rect key="frame" x="33" y="318" width="100" height="100"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" backgroundImage="node5"/>
-                                        <connections>
-                                            <action selector="node3Clicked:" destination="6Xo-Ia-2wg" eventType="touchUpInside" id="gBn-jG-eLd"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4y1-y6-Y0B" userLabel="node4button">
-                                        <rect key="frame" x="260" y="318" width="100" height="100"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" backgroundImage="node4"/>
-                                        <connections>
-                                            <action selector="node4Clicked:" destination="6Xo-Ia-2wg" eventType="touchUpInside" id="aeU-bR-JrW"/>
-                                        </connections>
-                                    </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Bh-Lb-LIZ" userLabel="node2Label">
-                                        <rect key="frame" x="225" y="89" width="150" height="25"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DGv-V2-6aD" userLabel="node3Label">
-                                        <rect key="frame" x="8" y="285" width="150" height="25"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iyt-qc-gmB" userLabel="node5button">
-                                        <rect key="frame" x="215" y="472" width="100" height="100"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" backgroundImage="node3"/>
-                                        <connections>
-                                            <action selector="node5Clicked:" destination="6Xo-Ia-2wg" eventType="touchUpInside" id="cgb-bi-W9E"/>
-                                            <segue destination="5dt-Bx-dYz" kind="show" identifier="segue1" id="ItI-cd-w2R"/>
-                                        </connections>
-                                    </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Alan Mathison Turing" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bsf-4r-0qF" userLabel="node5Label">
-                                        <rect key="frame" x="190" y="439" width="150" height="25"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="naq-C5-Te6" userLabel="node4Label">
-                                        <rect key="frame" x="235" y="277" width="150" height="25"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0eF-h7-fNZ" userLabel="node1Label">
-                                        <rect key="frame" x="20" y="40" width="150" height="25"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                 </subviews>
                                 <accessibility key="accessibilityConfiguration" identifier="mainView"/>
+                                <constraints>
+                                    <constraint firstItem="mNb-Ae-oMN" firstAttribute="leading" secondItem="AHa-ZG-EZK" secondAttribute="leading" id="0qd-AE-at8"/>
+                                    <constraint firstItem="mNb-Ae-oMN" firstAttribute="top" secondItem="AHa-ZG-EZK" secondAttribute="top" id="V5m-fd-kOO"/>
+                                    <constraint firstAttribute="bottom" secondItem="mNb-Ae-oMN" secondAttribute="bottom" id="h7p-2n-IcT"/>
+                                    <constraint firstAttribute="trailing" secondItem="mNb-Ae-oMN" secondAttribute="trailing" id="smN-Ph-Oaf"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <accessibility key="accessibilityConfiguration" identifier="view"/>
                         <constraints>
-                            <constraint firstItem="AHa-ZG-EZK" firstAttribute="top" secondItem="Z91-5E-0cR" secondAttribute="top" id="4s5-E5-g4M"/>
-                            <constraint firstItem="H4K-xd-9jB" firstAttribute="bottom" secondItem="9S4-N3-sad" secondAttribute="bottom" id="6k6-tM-Zvd"/>
-                            <constraint firstItem="AHa-ZG-EZK" firstAttribute="trailing" secondItem="Z91-5E-0cR" secondAttribute="trailing" id="A3V-s3-USm"/>
-                            <constraint firstItem="H4K-xd-9jB" firstAttribute="top" secondItem="Z91-5E-0cR" secondAttribute="top" id="K8u-y8-Eu6"/>
-                            <constraint firstAttribute="bottom" secondItem="H4K-xd-9jB" secondAttribute="bottom" id="Y07-RE-zLN"/>
-                            <constraint firstItem="H4K-xd-9jB" firstAttribute="trailing" secondItem="Z91-5E-0cR" secondAttribute="trailing" id="a7J-L6-MRT"/>
-                            <constraint firstItem="H4K-xd-9jB" firstAttribute="leading" secondItem="Z91-5E-0cR" secondAttribute="leading" id="bq3-xZ-HCl"/>
-                            <constraint firstItem="AHa-ZG-EZK" firstAttribute="leading" secondItem="Z91-5E-0cR" secondAttribute="leading" id="qvF-ks-IP3"/>
-                            <constraint firstItem="H4K-xd-9jB" firstAttribute="top" secondItem="Z91-5E-0cR" secondAttribute="top" id="tO0-Q7-oWt"/>
-                            <constraint firstItem="H4K-xd-9jB" firstAttribute="leading" secondItem="Z91-5E-0cR" secondAttribute="leading" id="vSe-sJ-6nv"/>
+                            <constraint firstItem="AHa-ZG-EZK" firstAttribute="top" secondItem="9S4-N3-sad" secondAttribute="top" id="4s5-E5-g4M"/>
+                            <constraint firstItem="AHa-ZG-EZK" firstAttribute="trailing" secondItem="9S4-N3-sad" secondAttribute="trailing" id="A3V-s3-USm"/>
+                            <constraint firstItem="AHa-ZG-EZK" firstAttribute="leading" secondItem="9S4-N3-sad" secondAttribute="leading" id="qvF-ks-IP3"/>
                             <constraint firstItem="AHa-ZG-EZK" firstAttribute="bottom" secondItem="9S4-N3-sad" secondAttribute="bottom" id="xvq-yP-LVh"/>
-                            <constraint firstItem="Z91-5E-0cR" firstAttribute="trailing" secondItem="H4K-xd-9jB" secondAttribute="trailing" id="xzC-MX-qV1"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Z91-5E-0cR"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Construct an algorithm!" id="gJM-Af-S4N"/>
+                    <navigationItem key="navigationItem" title="Start!" id="gJM-Af-S4N"/>
                     <connections>
-                        <outlet property="node1button" destination="H0f-hd-nYy" id="xM9-GA-o7A"/>
-                        <outlet property="node1label" destination="0eF-h7-fNZ" id="c5i-5N-8WB"/>
-                        <outlet property="node2button" destination="obp-sh-TDO" id="HLO-n4-kEd"/>
-                        <outlet property="node2label" destination="9Bh-Lb-LIZ" id="QAC-zP-5Oa"/>
-                        <outlet property="node3button" destination="jR0-ng-lzq" id="9rp-KM-a6Q"/>
-                        <outlet property="node3label" destination="DGv-V2-6aD" id="daO-ea-dNB"/>
-                        <outlet property="node4button" destination="4y1-y6-Y0B" id="yWf-kS-SH1"/>
-                        <outlet property="node4label" destination="naq-C5-Te6" id="pl1-BN-wwo"/>
-                        <outlet property="node5button" destination="iyt-qc-gmB" id="Bg7-7K-Adr"/>
-                        <outlet property="node5label" destination="bsf-4r-0qF" id="xoL-jv-h9W"/>
-                        <outlet property="view1" destination="H4K-xd-9jB" id="Pig-kD-Nxd"/>
+                        <outlet property="imageView1" destination="Df5-io-l8c" id="5iZ-o6-sSd"/>
+                        <outlet property="mainView" destination="AHa-ZG-EZK" id="D05-o8-v38"/>
+                        <outlet property="startExploring" destination="ZRS-K5-WWs" id="UiJ-ed-unz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qdK-1S-i1Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-202.40000000000001" y="51.724137931034484"/>
+            <point key="canvasLocation" x="-202.89855072463769" y="51.5625"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="MV4-Qr-KQP">
@@ -428,11 +333,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Construct an algorithm!" width="375" height="812"/>
-        <image name="node1" width="100" height="100"/>
-        <image name="node2" width="100" height="100"/>
-        <image name="node3" width="100" height="100"/>
-        <image name="node4" width="100" height="100"/>
-        <image name="node5" width="100" height="100"/>
+        <image name="Allgorithms-app-image" width="326" height="81"/>
+        <image name="Launch Screen" width="375" height="812"/>
+        <image name="Start-exploring-button" width="308" height="96"/>
     </resources>
 </document>
