@@ -41,7 +41,7 @@ let Algorithms = [
     
     "Testing Bipartiteness": "1. Assign RED color to the source vertex (putting into set U).\n2. Color all the neighbors with BLUE color (putting into set V).\n3. Color all neighbor’s neighbor with RED color (putting into set U).\n4. This way, assign color to all vertices such that it satisfies all the constraints of m way coloring problem where m = 2.\n5. While assigning colors, if we find a neighbor which is colored with same color as current vertex, then the graph cannot be colored with 2 vertices (or graph is not Bipartite)",
     
-    "Topological Ordering": "7",
-    "Ford - Fulkerson Algorithm": "8"
+    "Topological Sorting": "Step 1: Create the graph by calling addEdge(a,b).\nStep 2: Call the topologicalSort( )\n\tStep 2.1: Create a stack and a boolean array named as visited[ ];\n\tStep 2.2: Mark all the vertices as not visited i.e. initialize visited[ ] with 'false' value.\n\tStep 2.3: Call the recursive helper function topologicalSortUtil() to store Topological Sort starting from all vertices one by one.\nStep 3: def topologicalSortUtil(int v, bool visited[],stack<int> &Stack):\n\tStep 3.1: Mark the current node as visited.\n\tStep 3.2: Recur for all the vertices adjacent to this vertex.\n\tStep 3.3: Push current vertex to stack which stores result.\nStep 4: Atlast after return from the utility function, print contents of stack.",
+    "Ford - Fulkerson Algorithm": "Set flow_total = 0\nRepeat until there is no path from s to t:\n\tRun Depth First Search from source vertex s to find a flow path to end vertex t\n\tLet f be the minimum capacity value on the path\n\tAdd f to flow_total\nFor each edge u → v on the path:\n\tDecrease capacity of the edge c(u → v) by f\n\tIncrease capacity of the edge c(v → u) by f"
 ]
 

@@ -38,8 +38,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var forwardButton: UIButton!
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var mySlider: UISlider!
+    @IBOutlet weak var firstButtonView: UIView!
+    @IBOutlet weak var secondButtonView: UIView!
     //Index variables for the image arrays.
-    var stableIndex = 0,kruskalIndex = 0, primIndex = 0, bfsIndex = 0, dfsIndex = 0, topIndex = 0
+    var stableIndex = 0,kruskalIndex = 0, primIndex = 0, bfsIndex = 0, dfsIndex = 0, topIndex = 0, fordIndex = 0
     //Sets of images that will be used in slider or buttons.
     let stableMatchingImageSet = [#imageLiteral(resourceName: "frame_0_delay-7s.jpg"), #imageLiteral(resourceName: "frame_1_delay-7s.jpg"), #imageLiteral(resourceName: "frame_2_delay-7s.jpg"), #imageLiteral(resourceName: "frame_3_delay-7s.jpg"), #imageLiteral(resourceName: "frame_4_delay-7s.jpg"), #imageLiteral(resourceName: "frame_5_delay-7s.jpg"), #imageLiteral(resourceName: "frame_6_delay-7s.jpg")]
     let kruskalSet = [#imageLiteral(resourceName: "KruskalDemo-0.jpg"),#imageLiteral(resourceName: "KruskalDemo-1.jpg"),#imageLiteral(resourceName: "KruskalDemo-2.jpg"),#imageLiteral(resourceName: "KruskalDemo-3.jpg"),#imageLiteral(resourceName: "KruskalDemo-4.jpg"),#imageLiteral(resourceName: "KruskalDemo-5.jpg"),#imageLiteral(resourceName: "KruskalDemo-6.jpg"),#imageLiteral(resourceName: "KruskalDemo-7.jpg"),#imageLiteral(resourceName: "KruskalDemo-8.jpg"),#imageLiteral(resourceName: "KruskalDemo-9.jpg"),#imageLiteral(resourceName: "KruskalDemo-10.jpg"),#imageLiteral(resourceName: "KruskalDemo-11.jpg"),#imageLiteral(resourceName: "KruskalDemo-12.jpg"),#imageLiteral(resourceName: "KruskalDemo-13.jpg"),#imageLiteral(resourceName: "KruskalDemo-14.jpg"),#imageLiteral(resourceName: "KruskalDemo-15.jpg"),#imageLiteral(resourceName: "KruskalDemo-16.jpg"),#imageLiteral(resourceName: "KruskalDemo-17.jpg"),#imageLiteral(resourceName: "KruskalDemo-18.jpg"),#imageLiteral(resourceName: "KruskalDemo-19.jpg"),#imageLiteral(resourceName: "KruskalDemo-20.jpg"),#imageLiteral(resourceName: "KruskalDemo-21.jpg"),#imageLiteral(resourceName: "KruskalDemo-22.jpg"),#imageLiteral(resourceName: "KruskalDemo-23.jpg"),#imageLiteral(resourceName: "KruskalDemo-24.jpg"),#imageLiteral(resourceName: "KruskalDemo-25.jpg"),#imageLiteral(resourceName: "KruskalDemo-26.jpg"),#imageLiteral(resourceName: "KruskalDemo-27.jpg"),#imageLiteral(resourceName: "KruskalDemo-28.jpg"),#imageLiteral(resourceName: "KruskalDemo-29.jpg"),#imageLiteral(resourceName: "KruskalDemo-30.jpg"),#imageLiteral(resourceName: "KruskalDemo-31.jpg"),#imageLiteral(resourceName: "KruskalDemo-32.jpg"),#imageLiteral(resourceName: "KruskalDemo-33.jpg"),#imageLiteral(resourceName: "KruskalDemo-34.jpg"),#imageLiteral(resourceName: "KruskalDemo-35.jpg"),#imageLiteral(resourceName: "KruskalDemo-36.jpg"),#imageLiteral(resourceName: "KruskalDemo-37.jpg"),#imageLiteral(resourceName: "KruskalDemo-38.jpg"),#imageLiteral(resourceName: "KruskalDemo-39.jpg"),#imageLiteral(resourceName: "KruskalDemo-40.jpg"),#imageLiteral(resourceName: "KruskalDemo-41.jpg"),#imageLiteral(resourceName: "KruskalDemo-42.jpg"),#imageLiteral(resourceName: "KruskalDemo-43.jpg"),#imageLiteral(resourceName: "KruskalDemo-44.jpg"),#imageLiteral(resourceName: "KruskalDemo-45.jpg"),#imageLiteral(resourceName: "KruskalDemo-46.jpg"),#imageLiteral(resourceName: "KruskalDemo-47.jpg"),#imageLiteral(resourceName: "KruskalDemo-48.jpg"),#imageLiteral(resourceName: "KruskalDemo-49.jpg"),#imageLiteral(resourceName: "KruskalDemo-50.jpg"),#imageLiteral(resourceName: "KruskalDemo-51.jpg"),#imageLiteral(resourceName: "KruskalDemo-52.jpg"),#imageLiteral(resourceName: "KruskalDemo-53.jpg"),#imageLiteral(resourceName: "KruskalDemo-54.jpg"),#imageLiteral(resourceName: "KruskalDemo-55.jpg"),#imageLiteral(resourceName: "KruskalDemo-56.jpg"),#imageLiteral(resourceName: "KruskalDemo-57.jpg"),#imageLiteral(resourceName: "KruskalDemo-58.jpg"),#imageLiteral(resourceName: "KruskalDemo-59.jpg"),#imageLiteral(resourceName: "KruskalDemo-60.jpg"),#imageLiteral(resourceName: "KruskalDemo-61.jpg"),#imageLiteral(resourceName: "KruskalDemo-62.jpg"),#imageLiteral(resourceName: "KruskalDemo-63.jpg"),#imageLiteral(resourceName: "KruskalDemo-64.jpg"),#imageLiteral(resourceName: "KruskalDemo-65.jpg"),#imageLiteral(resourceName: "KruskalDemo-66.jpg"),#imageLiteral(resourceName: "KruskalDemo-67.jpg"),#imageLiteral(resourceName: "KruskalDemo-68.jpg"),#imageLiteral(resourceName: "KruskalDemo-69.jpg"),#imageLiteral(resourceName: "KruskalDemo-70.jpg"),#imageLiteral(resourceName: "KruskalDemo-71.jpg"),#imageLiteral(resourceName: "KruskalDemo-72.jpg"),#imageLiteral(resourceName: "KruskalDemo-73.jpg"),#imageLiteral(resourceName: "KruskalDemo-74.jpg"),#imageLiteral(resourceName: "KruskalDemo-75.jpg"),#imageLiteral(resourceName: "KruskalDemo-76.jpg"),#imageLiteral(resourceName: "KruskalDemo-77.jpg"),#imageLiteral(resourceName: "KruskalDemo-78.jpg"),#imageLiteral(resourceName: "KruskalDemo-79.jpg"),#imageLiteral(resourceName: "KruskalDemo-80.jpg"),#imageLiteral(resourceName: "KruskalDemo-81.jpg"),#imageLiteral(resourceName: "KruskalDemo-82.jpg"),#imageLiteral(resourceName: "KruskalDemo-83.jpg"),#imageLiteral(resourceName: "KruskalDemo-84.jpg"),#imageLiteral(resourceName: "KruskalDemo-85.jpg"),#imageLiteral(resourceName: "KruskalDemo-86.jpg"),#imageLiteral(resourceName: "KruskalDemo-87.jpg"),#imageLiteral(resourceName: "KruskalDemo-88.jpg"),#imageLiteral(resourceName: "KruskalDemo-89.jpg"),#imageLiteral(resourceName: "KruskalDemo-90.jpg"),#imageLiteral(resourceName: "KruskalDemo-91.jpg"),#imageLiteral(resourceName: "KruskalDemo-92.jpg")]
@@ -47,8 +49,24 @@ class ViewController: UIViewController {
     let bfsSet = [#imageLiteral(resourceName: "Animated_BFS-0.jpg"),#imageLiteral(resourceName: "Animated_BFS-1.jpg"),#imageLiteral(resourceName: "Animated_BFS-2.jpg"),#imageLiteral(resourceName: "Animated_BFS-3.jpg"),#imageLiteral(resourceName: "Animated_BFS-4.jpg"),#imageLiteral(resourceName: "Animated_BFS-5.jpg"),#imageLiteral(resourceName: "Animated_BFS-6.jpg"),#imageLiteral(resourceName: "Animated_BFS-7.jpg"),#imageLiteral(resourceName: "Animated_BFS-8.jpg"),#imageLiteral(resourceName: "Animated_BFS-9.jpg")]
     let dfsSet = [#imageLiteral(resourceName: "Depth-First-Search-0.jpg"),#imageLiteral(resourceName: "Depth-First-Search-1.jpg"),#imageLiteral(resourceName: "Depth-First-Search-2.jpg"),#imageLiteral(resourceName: "Depth-First-Search-3.jpg"),#imageLiteral(resourceName: "Depth-First-Search-4.jpg"),#imageLiteral(resourceName: "Depth-First-Search-5.jpg"),#imageLiteral(resourceName: "Depth-First-Search-6.jpg"),#imageLiteral(resourceName: "Depth-First-Search-7.jpg"),#imageLiteral(resourceName: "Depth-First-Search-8.jpg"),#imageLiteral(resourceName: "Depth-First-Search-9.jpg"),#imageLiteral(resourceName: "Depth-First-Search-10.jpg")]
     let bipartitenessImage = UIImage.init(imageLiteralResourceName: "Bipartiteness.png")
-        
+    let fordFulkersonImageSet = [UIImage.init(imageLiteralResourceName: "max-flow-8.png"),UIImage.init(imageLiteralResourceName: "max-flow-9.png"),UIImage.init(imageLiteralResourceName: "max-flow-10.png"),UIImage.init(imageLiteralResourceName: "max-flow-11.png")]
+    
+    //Button animations
+    @IBAction func animateButton(sender: UIButton) {
 
+        sender.transform = CGAffineTransform(scaleX: 0.6, y: 0.6)
+
+        UIView.animate(withDuration: 1.0,
+                                   delay: 0,
+                                   usingSpringWithDamping: CGFloat(0.20),
+                                   initialSpringVelocity: CGFloat(6.0),
+                                   options: UIView.AnimationOptions.allowUserInteraction,
+                                   animations: {
+                                    sender.transform = CGAffineTransform.identity
+            },
+                                   completion: { Void in()  }
+        )
+    }
     /*Slider controller function
       Cases represent selected algorithm*/
     @IBAction func sliderValueChanged(_ sender: UISlider) {
@@ -80,6 +98,10 @@ class ViewController: UIViewController {
                 else{
                     gif.image = UIImage.init(imageLiteralResourceName: "AnimatedSourBandicoot-mobile_\(topIndex).jpg")
                 }
+        case 7:
+                fordIndex = Int(sender.value)-1
+                gif.image = fordFulkersonImageSet[Int(sender.value)-1]
+                
         default:
             print("No algorithm selected!")
         }
@@ -122,6 +144,20 @@ class ViewController: UIViewController {
                 dfsIndex += 1
                 gif.image = dfsSet[dfsIndex]
                 indexLabel.text = "\(dfsIndex+1)/\(dfsSet.count)"
+            }
+        case 6:
+            if(topIndex < 300){
+                mySlider.value += 1
+                topIndex += 1
+                gif.image = UIImage.init(imageLiteralResourceName: "AnimatedSourBandicoot-mobile_\(topIndex).jpg")
+                indexLabel.text = "\(topIndex+1)/\(300)"
+            }
+        case 7:
+            if(fordIndex < fordFulkersonImageSet.count-1){
+                mySlider.value += 1
+                fordIndex += 1
+                gif.image = fordFulkersonImageSet[fordIndex]
+                indexLabel.text = "\(fordIndex+1)/\(fordFulkersonImageSet.count)"
             }
         default:
             print("No algorithm selected!")
@@ -168,7 +204,20 @@ class ViewController: UIViewController {
                 gif.image = dfsSet[dfsIndex]
                 indexLabel.text = "\(dfsIndex+1)/\(dfsSet.count)"
             }
-        
+        case 6:
+            if(topIndex >= 1){
+                mySlider.value -= 1
+                topIndex -= 1
+                gif.image = UIImage.init(imageLiteralResourceName: "AnimatedSourBandicoot-mobile_\(topIndex).jpg")
+                indexLabel.text = "\(topIndex-1)/\(300)"
+            }
+        case 7:
+            if(fordIndex >= 1){
+                mySlider.value -= 1
+                fordIndex -= 1
+                gif.image = fordFulkersonImageSet[fordIndex]
+                indexLabel.text = "\(fordIndex+1)/\(fordFulkersonImageSet.count)"
+            }
             
         default:
             print("No algorithm selected!")
@@ -188,6 +237,7 @@ class ViewController: UIViewController {
             break
         }
     }
+    //Codes that will be executed when view is up.
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -245,6 +295,12 @@ class ViewController: UIViewController {
                     gif.image = UIImage.init(imageLiteralResourceName: "AnimatedSourBandicoot-mobile_\(topIndex).jpg")
                 }
                 indexLabel.text = "1/300"
+            case 7:
+                mySlider.maximumValue = Float(fordFulkersonImageSet.count)
+                titleLabel.text = algorithmTitles[myIndex]
+                gif.image = fordFulkersonImageSet[fordIndex]
+                indexLabel.text = "1/\(fordFulkersonImageSet.count)"
+                
                 
             default:
                 print("No algorithm selected!")
