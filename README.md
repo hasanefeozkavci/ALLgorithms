@@ -42,3 +42,5 @@ You can contribute by forking and cloning the project locally.
 
 ![Switch Feature](https://imgur.com/beQSB3G.png)
 ![Switch Feature](https://imgur.com/IP7TWJe.png)
+## Video
+[Click for the video!](https://streamable.com/1atbba)
